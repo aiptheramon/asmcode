@@ -3196,44 +3196,7 @@ img {
     }
 }}
 
-/* ==================== MAIN LAYOUT FIXES UNTUK 1500px KE BAWAH ==================== */
-/* Memastikan layout tetap rapi seperti gambar referensi */
-
-/* Large Desktop (1200px - 1500px) */
-@media screen and (max-width: 1500px) {
-    .home__container {
-        max-width: 1300px;
-        padding: 0 3rem;
-    }
-    
-    .home__content {
-        gap: 3rem;
-        padding-top: 6rem;
-    }
-    
-    .home__social {
-        transform: translateX(40px);
-    }
-    
-    .profile-image-wrapper {
-        width: 280px;
-        height: 280px;
-    }
-    
-    .profile-video {
-        width: 260px;
-        height: 260px;
-    }
-    
-    .home__title {
-        font-size: 38px;
-    }
-    
-    .home__description {
-        max-width: 450px;
-    }
-}
-
+/* ==================== MAIN LAYOUT ==================== */
 /* Desktop Menengah (1024px - 1199px) */
 @media screen and (max-width: 1199px) {
     .home__container {
@@ -4190,102 +4153,192 @@ img {
     }
 }
 
-/* Fix untuk konsistensi spacing */
-@media screen and (min-width: 1501px) {
-    .home__container {
-        max-width: 1400px;
+/* ==================== FIX ROTATING TEXT TERPOTONG DI MOBILE ==================== */
+
+/* Perbaikan untuk semua ukuran mobile */
+@media screen and (max-width: 768px) {
+    .animated-subtitle {
+        height: auto;
+        min-height: 40px;
+        margin-bottom: 0.75rem;
+        overflow: visible;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
-    .home__content {
-        gap: 5rem;
+    .rotating-text {
+        font-size: 1.1rem;
+        position: relative;
+        right: auto;
+        left: auto;
+        transform: none;
+        opacity: 0;
+        text-align: center;
+        white-space: normal;
+        word-break: keep-all;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
+        margin: 0;
+        line-height: 1.3;
+        transition: opacity 0.5s ease;
     }
     
-    .profile-image-wrapper {
-        width: 320px;
-        height: 320px;
-    }
-    
-    .profile-video {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .home__title {
-        font-size: 42px;
+    .rotating-text.active {
+        opacity: 1;
+        transform: none;
     }
 }
 
-/* Pastikan gambar referensi tetap rapi */
-.home__title, 
-.home__subtitle, 
-.home__description,
-.section__title,
-.section__subtitle {
-    text-rendering: optimizeLegibility;
+/* Fix untuk tablet (600px - 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .rotating-text {
+        font-size: 1.2rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .animated-subtitle {
+        min-height: 45px;
+    }
+}
+
+/* Fix untuk large mobile (480px - 600px) */
+@media screen and (max-width: 600px) {
+    .animated-subtitle {
+        min-height: 38px;
+    }
+    
+    .rotating-text {
+        font-size: 1rem;
+        padding: 0 0.75rem;
+    }
+}
+
+/* Fix untuk medium mobile (400px - 480px) */
+@media screen and (max-width: 480px) {
+    .animated-subtitle {
+        min-height: 35px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+        line-height: 1.2;
+    }
+}
+
+/* Fix untuk small mobile (320px - 400px) */
+@media screen and (max-width: 400px) {
+    .animated-subtitle {
+        min-height: 32px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.8rem;
+        padding: 0 0.4rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Fix untuk extra small mobile (320px) */
+@media screen and (max-width: 320px) {
+    .animated-subtitle {
+        min-height: 30px;
+        margin-bottom: 0.35rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.75rem;
+        padding: 0 0.25rem;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+}
+
+/* Fix untuk landscape mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .animated-subtitle {
+        min-height: 28px;
+        margin-bottom: 0.3rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.75rem;
+        padding: 0 0.5rem;
+        white-space: nowrap;
+    }
+}
+
+/* Pastikan container tidak memotong teks */
+.home__data {
+    overflow: visible;
+}
+
+/* Animasi yang lebih halus */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rotating-text.active {
+    animation: fadeInText 0.4s ease forwards;
+}
+
+/* Fix untuk teks yang sangat panjang */
+.rotating-text {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+/* Opsi jika ingin teks tetap satu baris di ukuran tertentu */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .rotating-text {
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: clip;
+    }
+}
+
+/* Pastikan teks "UI/UX Designer" tidak terpotong */
+.rotating-text[data-text="UI/UX Designer"] {
+    font-size: inherit;
+    letter-spacing: normal;
+}
+
+/* Fix untuk perangkat dengan layar sangat kecil */
+@media screen and (max-width: 280px) {
+    .animated-subtitle {
+        min-height: 28px;
+    }
+    
+    .rotating-text {
+        font-size: 0.7rem;
+        padding: 0 0.2rem;
+    }
+}
+
+/* Tambahan untuk memastikan teks selalu terlihat */
+.rotating-text {
+    display: block;
+    visibility: visible;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Optimasi untuk tampilan seperti gambar */
-.profile-border {
-    border-color: rgba(196, 30, 58, 0.4);
-}
-
-.home__title-line {
-    font-weight: var(--font-black);
-    letter-spacing: 2px;
-}
-
-.rotating-text {
-    font-weight: var(--font-bold);
-    text-transform: uppercase;
-}
-
-.home__description {
-    font-weight: var(--font-medium);
-    opacity: 0.9;
-}
-
-.button {
-    font-weight: var(--font-bold);
-    border-width: 2px;
-}
-
-/* Pastikan skill section rapi */
-.skills__title {
-    font-weight: var(--font-black);
-}
-
-.skills__category {
-    font-weight: var(--font-bold);
-    color: var(--metal-primary);
-}
-
-/* Service section seperti gambar */
-.services__title {
-    font-weight: var(--font-black);
-    line-height: 1.3;
-}
-
-.services__content::before {
-    background: linear-gradient(to bottom, transparent, var(--metal-primary), transparent);
-}
-
-/* Portfolio section */
-.portfolio__title {
-    font-weight: var(--font-black);
-    letter-spacing: 2px;
-}
-
-.portfolio__description {
-    font-weight: var(--font-medium);
-}
-
-/* Footer */
-.footer__title {
-    font-weight: var(--font-black);
-}
-
-.footer__link {
-    font-weight: var(--font-bold);
+/* Fallback untuk browser lama */
+.rotating-text.active {
+    display: block;
+    position: relative;
+    opacity: 1;
 }
