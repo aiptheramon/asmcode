@@ -3196,40 +3196,327 @@ img {
     }
 }}
 
-/* ==================== ULTRA RESPONSIVE FIXES - ALL DEVICES DOWN TO 320px ==================== */
+/* ==================== MAIN LAYOUT FIXES UNTUK 1500px KE BAWAH ==================== */
+/* Memastikan layout tetap rapi seperti gambar referensi */
 
-/* Extra small devices (phones, 600px and down) */
-@media screen and (max-width: 600px) {
-    /* Container adjustments */
-    .container {
-        margin-left: 1rem;
-        margin-right: 1rem;
+/* Large Desktop (1200px - 1500px) */
+@media screen and (max-width: 1500px) {
+    .home__container {
+        max-width: 1300px;
+        padding: 0 3rem;
     }
     
-    /* Section padding */
-    .section {
-        padding: 3rem 0 4rem;
-    }
-    
-    .section__title {
-        font-size: 1.8rem;
-    }
-    
-    .section__subtitle {
-        font-size: 0.8rem;
-        margin-bottom: 2rem;
-    }
-    
-    /* Metal section title lines adjustment */
-    .metal-section-title::before,
-    .metal-section-title::after {
-        width: 30px;
-    }
-    
-    /* Home section */
     .home__content {
-        padding-top: 3rem;
+        gap: 3rem;
+        padding-top: 6rem;
+    }
+    
+    .home__social {
+        transform: translateX(40px);
+    }
+    
+    .profile-image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .profile-video {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .home__title {
+        font-size: 38px;
+    }
+    
+    .home__description {
+        max-width: 450px;
+    }
+}
+
+/* Desktop Menengah (1024px - 1199px) */
+@media screen and (max-width: 1199px) {
+    .home__container {
+        max-width: 1100px;
+        padding: 0 2rem;
+    }
+    
+    .home__content {
+        grid-template-columns: auto 1fr auto;
+        gap: 2.5rem;
+        padding-top: 5rem;
+    }
+    
+    .home__social {
+        transform: translateX(20px);
+        row-gap: 1.2rem;
+    }
+    
+    .home__social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .profile-video {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .home__title {
+        font-size: 34px;
+        margin-bottom: var(--mb-0-75);
+    }
+    
+    .animated-subtitle {
+        height: 42px;
+    }
+    
+    .rotating-text {
+        font-size: 1.4rem;
+    }
+    
+    .home__description {
+        max-width: 400px;
+        font-size: 0.95rem;
+        margin-bottom: var(--mb-1-5);
+    }
+    
+    .button {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Skills section adjustment */
+    .skills__container {
         gap: 1.5rem;
+    }
+    
+    .skills__header {
+        padding: 1.1rem 1.3rem;
+    }
+    
+    .skills__title {
+        font-size: 1rem;
+    }
+    
+    /* Services section */
+    .services__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+    
+    .services__content {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .services__icon {
+        font-size: 2.8rem;
+    }
+    
+    .services__title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet Landscape (900px - 1023px) */
+@media screen and (max-width: 1023px) {
+    .home__content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding-top: 5rem;
+    }
+    
+    .home__social {
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        gap: 2rem;
+        transform: translateX(0);
+        order: 3;
+        margin-top: 1rem;
+    }
+    
+    .home__img {
+        grid-column: 1;
+        order: 1;
+    }
+    
+    .home__data {
+        grid-column: 1;
+        text-align: center;
+        align-items: center;
+        justify-self: center;
+        order: 2;
+    }
+    
+    .profile-image-wrapper {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .profile-video {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .home__title {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .home__title-line {
+        display: block;
+    }
+    
+    .animated-subtitle {
+        justify-content: center;
+        height: 40px;
+    }
+    
+    .rotating-text {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        font-size: 1.3rem;
+    }
+    
+    .rotating-text.active {
+        transform: translateX(-50%) translateY(0);
+    }
+    
+    .home__description {
+        text-align: center;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .button.button--flex {
+        align-self: center;
+    }
+    
+    /* Skills section untuk tablet */
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    
+    .skills__list {
+        grid-template-columns: 1fr;
+        padding: 1rem 1.2rem 1.5rem;
+    }
+    
+    /* Services untuk tablet */
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Portfolio untuk tablet */
+    .portfolio__content {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .portfolio__img {
+        height: 160px;
+        max-width: 260px;
+    }
+}
+
+/* Tablet Portrait (768px - 899px) */
+@media screen and (max-width: 899px) {
+    .home__content {
+        gap: 2rem;
+        padding-top: 4.5rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .profile-video {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .home__title {
+        font-size: 28px;
+    }
+    
+    .rotating-text {
+        font-size: 1.2rem;
+    }
+    
+    .home__description {
+        font-size: 0.9rem;
+        max-width: 450px;
+    }
+    
+    .button {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Skills section */
+    .skills__container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .skills__header {
+        padding: 1rem 1.2rem;
+    }
+    
+    .skills__title {
+        font-size: 1rem;
+    }
+    
+    .skills__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .skills__category {
+        grid-column: 1 / -1;
+    }
+    
+    /* Services */
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    /* Footer */
+    .footer__container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer__links {
+        gap: 2rem;
+    }
+    
+    .footer__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large Mobile (600px - 767px) */
+@media screen and (max-width: 767px) {
+    .home__content {
+        padding-top: 4rem;
+        gap: 1.8rem;
     }
     
     .profile-image-wrapper {
@@ -3243,22 +3530,263 @@ img {
     }
     
     .home__title {
-        font-size: 1.8rem;
+        font-size: 26px;
+    }
+    
+    .rotating-text {
+        font-size: 1.1rem;
     }
     
     .home__description {
-        font-size: 0.9rem;
-        padding: 0;
-        max-width: 100%;
+        font-size: 0.85rem;
+        max-width: 400px;
+        padding: 0 1rem;
     }
     
-    /* Skills section */
-    .skills__container {
+    .home__social {
+        gap: 1.5rem;
+    }
+    
+    .home__social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+    
+    /* Skills */
+    .skills__list {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills__titles {
+        padding: 0.5rem 0;
+    }
+    
+    .skills__name {
+        font-size: 0.8rem;
+    }
+    
+    .skills__level {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.4rem;
+    }
+    
+    /* Services */
+    .services__container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .services__content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .services__icon {
+        font-size: 2.5rem;
+    }
+    
+    .services__title {
+        font-size: 1.1rem;
+    }
+    
+    .button__service {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Portfolio */
+    .portfolio__content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .portfolio__img {
+        height: 140px;
+        max-width: 220px;
+    }
+    
+    .portfolio__title {
+        font-size: 1rem;
+    }
+    
+    .portfolio__description {
+        font-size: 0.8rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .swiper-pagination-bullet-active {
+        width: 22px;
+    }
+    
+    /* Footer */
+    .footer__links {
+        flex-direction: column;
         gap: 1rem;
     }
     
+    .footer__link {
+        font-size: 0.8rem;
+    }
+    
+    .footer__copy {
+        font-size: 0.7rem;
+    }
+}
+
+/* Medium Mobile (480px - 599px) */
+@media screen and (max-width: 599px) {
+    .home__content {
+        padding-top: 3.5rem;
+        gap: 1.5rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .profile-video {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .home__title {
+        font-size: 24px;
+    }
+    
+    .rotating-text {
+        font-size: 1rem;
+    }
+    
+    .home__description {
+        font-size: 0.8rem;
+        max-width: 350px;
+    }
+    
+    .home__social-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+    
+    .button {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Section titles */
+    .section__title {
+        font-size: 1.6rem;
+    }
+    
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 25px;
+    }
+    
+    .section__subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Personality traits */
+    .trait-item:nth-child(1) {
+        transform: translate(-50%, -135%);
+    }
+    
+    .trait-item:nth-child(2) {
+        transform: translate(42%, -50%);
+    }
+    
+    .trait-item:nth-child(3) {
+        transform: translate(-50%, 42%);
+    }
+    
+    .trait-text {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+    
+    .scribble-arrow svg {
+        width: 32px;
+    }
+}
+
+/* Small Mobile (400px - 479px) */
+@media screen and (max-width: 479px) {
+    .home__content {
+        padding-top: 3rem;
+        gap: 1.2rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .profile-video {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .home__title {
+        font-size: 22px;
+    }
+    
+    .rotating-text {
+        font-size: 0.95rem;
+    }
+    
+    .animated-subtitle {
+        height: 30px;
+    }
+    
+    .home__description {
+        font-size: 0.75rem;
+        max-width: 300px;
+        line-height: 1.4;
+    }
+    
+    .home__social {
+        gap: 1.2rem;
+    }
+    
+    .home__social-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+    
+    .button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.75rem;
+    }
+    
+    .button__icon {
+        font-size: 1rem;
+    }
+    
+    /* Section titles */
+    .section__title {
+        font-size: 1.5rem;
+    }
+    
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 20px;
+    }
+    
+    /* Skills */
     .skills__header {
-        padding: 1rem;
+        padding: 0.9rem 1rem;
+    }
+    
+    .skills__icon,
+    .skills__arrow {
+        font-size: 1.3rem;
     }
     
     .skills__title {
@@ -3269,203 +3797,49 @@ img {
         padding: 0.8rem 1rem 1.2rem;
     }
     
-    .skills__titles {
-        padding: 0.4rem 0;
-    }
-    
     .skills__name {
         font-size: 0.75rem;
     }
     
     .skills__level {
-        font-size: 0.6rem;
-        padding: 0.15rem 0.4rem;
+        font-size: 0.55rem;
+        padding: 0.1rem 0.3rem;
     }
     
-    /* Services section */
-    .services__container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
+    /* Services */
     .services__content {
-        padding: 1.5rem 1rem;
-    }
-    
-    .services__title {
-        font-size: 1.2rem;
-    }
-    
-    .services__icon {
-        font-size: 2.5rem;
-    }
-    
-    .button__service {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.7rem;
-    }
-    
-    /* Modal adjustments */
-    .services__modal-content {
-        padding: 1.5rem;
-        width: 95%;
-    }
-    
-    .services__modal-title {
-        font-size: 1.3rem;
-    }
-    
-    .services__modal-service p {
-        font-size: 0.85rem;
-    }
-    
-    /* Portfolio section */
-    .portfolio__content {
-        padding: 1rem 0.5rem;
-    }
-    
-    .portfolio__img {
-        height: 100px;
-        max-width: 180px;
-    }
-    
-    .portfolio__title {
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-    }
-    
-    .portfolio__description {
-        font-size: 0.75rem;
-        line-height: 1.4;
-    }
-    
-    .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
-    }
-    
-    .swiper-pagination-bullet-active {
-        width: 18px;
-    }
-    
-    /* Footer */
-    .footer__bg {
-        padding: 2rem 1rem;
-    }
-    
-    .footer__title {
-        font-size: 1.3rem;
-    }
-    
-    .footer__subtitle {
-        font-size: 0.7rem;
-    }
-    
-    .footer__link {
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-    }
-    
-    .footer__copy {
-        font-size: 0.65rem;
-        margin-top: 1.5rem;
-    }
-    
-    /* Scroll up */
-    .scrollup {
-        width: 35px;
-        height: 35px;
-        right: 0.8rem;
-    }
-    
-    .scrollup__icon {
-        font-size: 1.2rem;
-    }
-    
-    /* Personality traits */
-    .trait-text {
-        font-size: 0.6rem;
-        padding: 0.1rem 0.4rem;
-        letter-spacing: 1px;
-    }
-    
-    .scribble-arrow svg {
-        width: 30px;
-    }
-}
-
-/* Small phones (480px and down) */
-@media screen and (max-width: 480px) {
-    .profile-image-wrapper {
-        width: 170px;
-        height: 170px;
-    }
-    
-    .profile-video {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .home__title {
-        font-size: 1.6rem;
-    }
-    
-    .rotating-text {
-        font-size: 1rem;
-    }
-    
-    .home__description {
-        font-size: 0.85rem;
-    }
-    
-    .button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.85rem;
-    }
-    
-    .skills__header {
-        padding: 0.8rem;
-    }
-    
-    .skills__icon, 
-    .skills__arrow {
-        font-size: 1.3rem;
-    }
-    
-    .skills__title {
-        font-size: 0.85rem;
-    }
-    
-    .skills__category {
-        font-size: 0.7rem;
-        padding-left: 0.4rem;
-    }
-    
-    .skills__check-icon {
-        font-size: 0.9rem;
-    }
-    
-    .services__title {
-        font-size: 1.1rem;
+        padding: 1.2rem 0.8rem;
     }
     
     .services__icon {
         font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .services__title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Portfolio */
+    .portfolio__content {
+        padding: 1.2rem 0.8rem;
     }
     
     .portfolio__img {
-        height: 90px;
-        max-width: 160px;
+        height: 120px;
+        max-width: 200px;
     }
     
-    .footer__links {
-        gap: 0.8rem;
+    .portfolio__title {
+        font-size: 0.9rem;
     }
     
-    .footer__link {
-        font-size: 0.65rem;
+    .portfolio__description {
+        font-size: 0.7rem;
     }
     
+    /* Personality traits */
     .trait-item:nth-child(1) {
         transform: translate(-50%, -130%);
     }
@@ -3479,114 +3853,25 @@ img {
     }
 }
 
-/* Extra small phones (400px and down) */
-@media screen and (max-width: 400px) {
-    .profile-image-wrapper {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .profile-video {
-        width: 130px;
-        height: 130px;
-    }
-    
-    .home__title {
-        font-size: 1.4rem;
-    }
-    
-    .home__subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .home__social {
+/* Extra Small Mobile (320px - 399px) */
+@media screen and (max-width: 399px) {
+    .home__content {
+        padding-top: 2.5rem;
         gap: 1rem;
     }
     
-    .home__social-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    
-    .skills__header {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    
-    .skills__arrow {
-        margin-left: 0;
-    }
-    
-    .services__modal-service {
-        flex-wrap: wrap;
-    }
-    
-    .services__modal-icon {
-        font-size: 1.1rem;
-    }
-    
-    .services__modal-service p {
-        font-size: 0.8rem;
-        width: calc(100% - 2rem);
-    }
-    
-    .footer__container {
-        gap: 1rem;
-    }
-    
-    .footer__links {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-/* Minimum supported size (320px) */
-@media screen and (max-width: 320px) {
-    .container {
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-    }
-    
-    .section {
-        padding: 2.5rem 0 3rem;
-    }
-    
-    .section__title {
-        font-size: 1.3rem;
-    }
-    
-    .section__subtitle {
-        font-size: 0.7rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .metal-section-title::before,
-    .metal-section-title::after {
-        width: 20px;
-    }
-    
     .profile-image-wrapper {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
     }
     
     .profile-video {
-        width: 110px;
-        height: 110px;
-    }
-    
-    .profile-border {
-        border-width: 2px;
+        width: 120px;
+        height: 120px;
     }
     
     .home__title {
-        font-size: 1.2rem;
-        line-height: 1.2;
-    }
-    
-    .home__title-line {
-        display: block;
+        font-size: 20px;
     }
     
     .rotating-text {
@@ -3594,21 +3879,17 @@ img {
     }
     
     .animated-subtitle {
-        height: 25px;
+        height: 28px;
     }
     
     .home__description {
-        font-size: 0.75rem;
-        margin-bottom: 1rem;
+        font-size: 0.7rem;
+        max-width: 260px;
+        margin-bottom: 0.8rem;
     }
     
-    .button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.75rem;
-    }
-    
-    .button__icon {
-        font-size: 1.1rem;
+    .home__social {
+        gap: 1rem;
     }
     
     .home__social-icon {
@@ -3617,17 +3898,46 @@ img {
         font-size: 0.9rem;
     }
     
-    .skills__header {
-        padding: 0.6rem;
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
     }
     
-    .skills__icon, 
+    .button__icon {
+        font-size: 0.9rem;
+    }
+    
+    /* Section titles */
+    .section__title {
+        font-size: 1.4rem;
+    }
+    
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 15px;
+    }
+    
+    .section__subtitle {
+        font-size: 0.7rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Skills */
+    .skills__container {
+        gap: 0.8rem;
+    }
+    
+    .skills__header {
+        padding: 0.8rem;
+    }
+    
+    .skills__icon,
     .skills__arrow {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .skills__title {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
     
     .skills__list {
@@ -3639,101 +3949,64 @@ img {
     }
     
     .skills__check-icon {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .skills__name {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
     
     .skills__level {
-        font-size: 0.55rem;
-        padding: 0.1rem 0.3rem;
+        font-size: 0.5rem;
+        padding: 0.1rem 0.25rem;
     }
     
-    .skills__category {
-        font-size: 0.6rem;
-        margin: 0.2rem 0 0.2rem;
-    }
-    
+    /* Services */
     .services__content {
-        padding: 1.2rem 0.8rem;
+        padding: 1rem 0.6rem;
     }
     
     .services__icon {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
     }
     
     .services__title {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
     }
     
     .button__service {
-        padding: 0.5rem 1rem;
-        font-size: 0.65rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.6rem;
     }
     
-    .services__modal-content {
-        padding: 1rem;
-    }
-    
-    .services__modal-title {
-        font-size: 1.1rem;
-    }
-    
-    .services__modal-close {
-        font-size: 1.3rem;
-        width: 30px;
-        height: 30px;
-        top: 0.5rem;
-        right: 0.5rem;
-    }
-    
-    .services__modal-service {
-        gap: 0.4rem;
-    }
-    
-    .services__modal-icon {
-        font-size: 1rem;
-    }
-    
-    .services__modal-service p {
-        font-size: 0.7rem;
-    }
-    
+    /* Portfolio */
     .portfolio__img {
-        height: 70px;
-        max-width: 120px;
-        margin-bottom: 0.8rem;
+        height: 100px;
+        max-width: 160px;
     }
     
     .portfolio__title {
         font-size: 0.8rem;
-        padding-bottom: 0.3rem;
     }
     
     .portfolio__description {
         font-size: 0.65rem;
+        line-height: 1.3;
     }
     
     .swiper-pagination-bullet {
-        width: 5px;
-        height: 5px;
-        margin: 0 3px !important;
+        width: 6px;
+        height: 6px;
     }
     
     .swiper-pagination-bullet-active {
-        width: 15px;
+        width: 18px;
     }
     
-    .footer__bg {
-        padding: 1.5rem 0.75rem;
-    }
-    
+    /* Footer */
     .footer__title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .footer__subtitle {
@@ -3741,36 +4014,14 @@ img {
     }
     
     .footer__link {
-        font-size: 0.6rem;
-        letter-spacing: 0.5px;
+        font-size: 0.7rem;
     }
     
     .footer__copy {
-        font-size: 0.55rem;
-        margin-top: 1rem;
+        font-size: 0.6rem;
     }
     
-    .scrollup {
-        width: 30px;
-        height: 30px;
-        right: 0.5rem;
-    }
-    
-    .scrollup__icon {
-        font-size: 1rem;
-    }
-    
-    /* Personality traits for 320px */
-    .trait-text {
-        font-size: 0.55rem;
-        padding: 0.1rem 0.3rem;
-        letter-spacing: 0.5px;
-    }
-    
-    .scribble-arrow svg {
-        width: 25px;
-    }
-    
+    /* Personality traits */
     .trait-item:nth-child(1) {
         transform: translate(-50%, -120%);
     }
@@ -3783,28 +4034,22 @@ img {
         transform: translate(-50%, 35%);
     }
     
-    /* Loading screen for 320px */
-    .loading-title {
-        font-size: 1.2rem;
+    .trait-text {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.3rem;
     }
     
-    .loading-subtitle {
-        font-size: 0.6rem;
-        letter-spacing: 2px;
-    }
-    
-    .percentage {
-        font-size: 1.2rem;
-    }
-    
-    .status-message {
-        font-size: 0.7rem;
-        padding: 0.3rem;
+    .scribble-arrow svg {
+        width: 28px;
     }
 }
 
-/* Landscape orientation fixes for small devices */
-@media screen and (max-height: 500px) and (orientation: landscape) {
+/* Minimum 320px - Final touches */
+@media screen and (max-width: 320px) {
+    .home__container {
+        padding: 0 0.75rem;
+    }
+    
     .home__content {
         padding-top: 2rem;
     }
@@ -3819,694 +4064,228 @@ img {
         height: 100px;
     }
     
-    .home__social {
-        gap: 0.8rem;
-    }
-    
-    .home__social-icon {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .trait-item {
-        display: none; /* Hide personality traits in landscape to save space */
-    }
-    
-    .services__modal-content {
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-}
-
-/* Fix for notched phones */
-@supports (padding: max(0px)) {
-    @media screen and (max-width: 600px) {
-        .header {
-            padding-left: max(1rem, env(safe-area-inset-left));
-            padding-right: max(1rem, env(safe-area-inset-right));
-        }
-        
-        .footer__bg {
-            padding-bottom: max(1rem, env(safe-area-inset-bottom));
-        }
-    }
-}
-
-/* High refresh rate devices optimization */
-@media (min-resolution: 120dpi) {
-    .profile-video,
-    .portfolio__img {
-        image-rendering: crisp-edges;
-    }
-}
-
-/* Print styles - hide unnecessary elements when printing */
-@media print {
-    #silk,
-    .loading-screen,
-    .scrollup,
-    .nav__toggle,
-    .services__modal,
-    .home__social {
-        display: none !important;
-    }
-    
-    body {
-        background: white;
-        color: black;
-    }
-    
-    .metal-theme::before {
-        display: none;
-    }
-}
-
-/* ==================== HOME PROFILE DATA ULTRA RESPONSIVE (320px minimum) ==================== */
-
-/* Extra small devices (600px and down) */
-@media screen and (max-width: 600px) {
-    .home__data {
-        width: 100%;
-        padding: 0 0.5rem;
-    }
-    
     .home__title {
-        font-size: 1.8rem;
-        line-height: 1.2;
-        margin-bottom: 0.75rem;
-        letter-spacing: 1px;
-    }
-    
-    .home__title-line {
-        display: block;
-    }
-    
-    .animated-subtitle {
-        height: 40px;
-        margin-bottom: 0.75rem;
+        font-size: 18px;
     }
     
     .rotating-text {
-        font-size: 1.1rem;
-        white-space: normal;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .home__description {
-        font-size: 0.9rem;
-        max-width: 100%;
-        margin-bottom: 1.25rem;
-        line-height: 1.5;
-        padding: 0 0.25rem;
-    }
-    
-    .button.button--flex {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.85rem;
-    }
-    
-    .button__icon {
-        font-size: 1.2rem;
-    }
-}
-
-/* Small phones (480px and down) */
-@media screen and (max-width: 480px) {
-    .home__data {
-        padding: 0 0.25rem;
-    }
-    
-    .home__title {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .animated-subtitle {
-        height: 35px;
-        margin-bottom: 0.5rem;
-    }
-    
-    .rotating-text {
-        font-size: 1rem;
-        padding: 0 0.5rem;
-    }
-    
-    .home__description {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-        line-height: 1.4;
-        padding: 0;
-    }
-    
-    .button.button--flex {
-        padding: 0.7rem 1.3rem;
         font-size: 0.8rem;
-    }
-    
-    .button__icon {
-        font-size: 1.1rem;
-        margin-left: 0.4rem;
-    }
-}
-
-/* Extra small phones (400px and down) */
-@media screen and (max-width: 400px) {
-    .home__data {
-        padding: 0;
-    }
-    
-    .home__title {
-        font-size: 1.4rem;
-        letter-spacing: 0.5px;
-    }
-    
-    .home__title-line {
-        margin-bottom: 0.1rem;
-    }
-    
-    .animated-subtitle {
-        height: 30px;
-    }
-    
-    .rotating-text {
-        font-size: 0.9rem;
-    }
-    
-    .home__description {
-        font-size: 0.8rem;
-        margin-bottom: 0.9rem;
-        line-height: 1.4;
-    }
-    
-    .button.button--flex {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.75rem;
-    }
-    
-    .button__icon {
-        font-size: 1rem;
-        margin-left: 0.3rem;
-    }
-}
-
-/* Minimum supported size (320px) - HOME DATA FOCUS */
-@media screen and (max-width: 320px) {
-    .home__data {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    .home__title {
-        font-size: 1.2rem;
-        line-height: 1.2;
-        margin-bottom: 0.4rem;
-        letter-spacing: 0.5px;
-    }
-    
-    .home__title-line {
-        display: block;
-        margin-bottom: 0.1rem;
-    }
-    
-    .home__title-line:last-child {
-        margin-bottom: 0;
     }
     
     .animated-subtitle {
         height: 25px;
-        margin-bottom: 0.4rem;
-    }
-    
-    .rotating-text {
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-        padding: 0;
-        white-space: nowrap;
-    }
-    
-    /* Fix untuk rotating text di 320px */
-    .rotating-text.active {
-        transform: translateX(-50%) translateY(0);
-        width: auto;
     }
     
     .home__description {
-        font-size: 0.7rem;
-        margin-bottom: 0.8rem;
-        line-height: 1.3;
-        padding: 0 0.2rem;
-        max-width: 260px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    /* Button styling untuk 320px */
-    .button.button--flex {
-        padding: 0.5rem 1rem;
         font-size: 0.65rem;
-        border-radius: 25px;
-        letter-spacing: 1px;
-        white-space: nowrap;
+        max-width: 240px;
     }
     
-    .button__icon {
-        font-size: 0.9rem;
-        margin-left: 0.25rem;
+    .home__social-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
     }
     
-    /* Hover effects di nonaktifkan untuk mobile kecil */
-    .button:hover {
-        transform: none;
-        box-shadow: 0 5px 10px rgba(196, 30, 58, 0.3);
+    .button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.65rem;
     }
     
-    /* Profile section integration */
-    .home__content {
-        gap: 1rem;
-        padding-top: 2.5rem;
+    .section__title {
+        font-size: 1.3rem;
     }
     
-    .profile-image-wrapper {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 0.25rem;
+    .skills__title {
+        font-size: 0.8rem;
     }
     
-    .profile-video {
-        width: 100px;
-        height: 100px;
+    .skills__name {
+        font-size: 0.65rem;
     }
     
-    .profile-border {
-        border-width: 2px;
+    .services__title {
+        font-size: 0.85rem;
     }
     
-    /* Personality traits di 320px - lebih kecil dan dekat */
-    .trait-text {
-        font-size: 0.5rem;
-        padding: 0.1rem 0.25rem;
-        letter-spacing: 0.5px;
+    .portfolio__img {
+        height: 80px;
+        max-width: 140px;
     }
     
-    .scribble-arrow svg {
-        width: 22px;
+    .portfolio__title {
+        font-size: 0.75rem;
+    }
+    
+    .portfolio__description {
+        font-size: 0.6rem;
     }
     
     .trait-item:nth-child(1) {
         transform: translate(-50%, -115%);
     }
     
-    .trait-item:nth-child(1) .scribble-arrow {
-        gap: 3px;
-    }
-    
     .trait-item:nth-child(2) {
         transform: translate(32%, -50%);
-    }
-    
-    .trait-item:nth-child(2) .scribble-arrow {
-        gap: 3px;
     }
     
     .trait-item:nth-child(3) {
         transform: translate(-50%, 32%);
     }
-    
-    .trait-item:nth-child(3) .scribble-arrow {
-        gap: 3px;
-    }
-    
-    /* Social icons di 320px */
-    .home__social {
-        gap: 0.8rem;
-        margin-top: 0.5rem;
-    }
-    
-    .home__social-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 0.8rem;
-    }
-    
-    /* Active states */
-    .active-link::after {
-        width: 3px;
-        height: 3px;
-    }
 }
 
-/* Landscape mode untuk sangat kecil */
-@media screen and (max-height: 450px) and (orientation: landscape) and (max-width: 700px) {
+/* Landscape mode untuk semua ukuran */
+@media screen and (max-height: 500px) and (orientation: landscape) {
     .home__content {
-        padding-top: 1.5rem;
-        gap: 0.75rem;
+        padding-top: 1rem;
+        gap: 0.8rem;
     }
     
     .profile-image-wrapper {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
     
     .profile-video {
-        width: 75px;
-        height: 75px;
-    }
-    
-    .home__data {
-        padding: 0 0.5rem;
+        width: 85px;
+        height: 85px;
     }
     
     .home__title {
-        font-size: 1rem;
-        margin-bottom: 0.2rem;
-    }
-    
-    .animated-subtitle {
-        height: 20px;
-        margin-bottom: 0.2rem;
+        font-size: 18px;
     }
     
     .rotating-text {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .animated-subtitle {
+        height: 22px;
     }
     
     .home__description {
         font-size: 0.6rem;
+        max-width: 300px;
         margin-bottom: 0.5rem;
-        line-height: 1.2;
-        max-width: 200px;
-    }
-    
-    .button.button--flex {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.55rem;
-    }
-    
-    .button__icon {
-        font-size: 0.7rem;
-    }
-    
-    .trait-item {
-        display: none; /* Hide traits in landscape */
     }
     
     .home__social {
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .home__social-icon {
-        width: 24px;
-        height: 24px;
-        font-size: 0.7rem;
-    }
-}
-
-/* Untuk device dengan rasio pixel tinggi (Retina display) */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .home__title {
-        text-shadow: 0 0 5px rgba(196, 30, 58, 0.3);
-    }
-    
-    .rotating-text {
-        text-shadow: 0 0 8px rgba(196, 30, 58, 0.4);
-    }
-}
-
-/* Fix untuk notched phones - home data */
-@supports (padding: max(0px)) {
-    @media screen and (max-width: 600px) {
-        .home__data {
-            padding-left: max(0.5rem, env(safe-area-inset-left));
-            padding-right: max(0.5rem, env(safe-area-inset-right));
-        }
-    }
-    
-    @media screen and (max-width: 320px) {
-        .home__data {
-            padding-left: max(0.25rem, env(safe-area-inset-left));
-            padding-right: max(0.25rem, env(safe-area-inset-right));
-        }
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .home__title {
-        text-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
-    }
-    
-    .rotating-text {
-        text-shadow: 0 0 15px rgba(196, 30, 58, 0.6);
-    }
-}
-
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-    .rotating-text {
-        transition: none;
-    }
-    
-    .rotating-text.active {
-        transition: none;
-    }
-    
-    .button:hover {
-        transform: none;
-    }
-}
-
-/* High contrast mode */
-@media (prefers-contrast: high) {
-    .home__title {
-        color: #ffffff;
-        text-shadow: none;
-    }
-    
-    .rotating-text {
-        color: #ff0000;
-        text-shadow: none;
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
     }
     
     .button {
-        border: 2px solid #ffffff;
-    }
-}
-
-/* Fix untuk font rendering di mobile kecil */
-@media screen and (max-width: 350px) {
-    .home__title {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.6rem;
     }
     
-    .rotating-text {
-        font-weight: 600; /* Sedikit lebih tebal untuk keterbacaan */
-    }
-    
-    .home__description {
-        -webkit-font-smoothing: antialiased;
-    }
-}
-
-/* Pastikan teks tidak terpotong di 320px */
-@media screen and (max-width: 320px) {
-    .home__title,
-    .rotating-text,
-    .home__description,
-    .button {
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* Nama panjang tetap di satu baris */
-    .home__title-line {
-        white-space: nowrap;
-    }
-    
-    /* Untuk nama yang sangat panjang, kasih opsi wrap */
-    @media screen and (max-width: 280px) {
-        .home__title-line {
-            white-space: normal;
-            font-size: 1rem;
-        }
-        
-        .home__title {
-            font-size: 1rem;
-        }
-    }
-}
-
-/* Tambahan styling untuk animasi subtitle di 320px */
-@media screen and (max-width: 320px) {
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateX(-50%) translateY(10px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    }
-    
-    .rotating-text.active {
-        animation: fadeInUp 0.4s ease forwards;
-    }
-    
-    /* Optimasi untuk performa */
-    .rotating-text {
-        will-change: transform, opacity;
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    .button:active {
-        transform: scale(0.95);
-        transition: transform 0.1s ease;
-    }
-    
-    .home__social-icon:active {
-        transform: scale(0.9);
-    }
-}
-
-/* Final check untuk 320px - memastikan semuanya muat */
-@media screen and (max-width: 320px) {
-    /* Container width fix */
-    .home__container {
-        width: 100%;
-        min-width: 280px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 0.5rem;
-    }
-    
-    /* Flexibilitas untuk konten */
-    .home__data {
-        width: 100%;
-        min-width: 260px;
-    }
-    
-    /* Memastikan button tidak terlalu panjang */
-    .button {
-        max-width: 180px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    /* Overflow protection */
-    .home__description {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-}
-
-/* ==================== SILK BACKGROUND DISABLE BELOW 500px ==================== */
-
-/* Nonaktifkan silk background di semua device dengan lebar di bawah 500px */
-@media screen and (max-width: 500px) {
-    #silk {
-        display: none !important;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
-    
-    /* Fallback gradient yang lebih ringan */
-    .metal-theme {
-        background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
-        position: relative;
-    }
-    
-    /* Efek minimal sebagai pengganti silk */
-    .metal-theme::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            radial-gradient(circle at 20% 30%, rgba(196, 30, 58, 0.08) 0%, transparent 40%),
-            radial-gradient(circle at 80% 70%, rgba(0, 191, 255, 0.08) 0%, transparent 40%);
-        pointer-events: none;
-        z-index: -1;
-        opacity: 0.8;
-    }
-}
-
-/* Untuk ukuran 500px - 600px bisa dengan opacity sangat rendah jika tetap ingin ada */
-@media screen and (min-width: 501px) and (max-width: 600px) {
-    #silk {
-        opacity: 0.15; /* Sangat transparan */
-        filter: blur(2px);
-    }
-}
-
-/* Pastikan di ukuran 500px exact juga disable */
-@media screen and (max-width: 500px) {
-    /* Optimasi tambahan untuk performa */
-    .metal-theme::after {
+    /* Sembunyikan personality traits di landscape */
+    .trait-item {
         display: none;
     }
+}
+
+/* Fix untuk konsistensi spacing */
+@media screen and (min-width: 1501px) {
+    .home__container {
+        max-width: 1400px;
+    }
     
-    /* Kurangi efek glow berlebihan */
-    .metal-section-title {
-        text-shadow: 0 0 5px rgba(196, 30, 58, 0.2);
+    .home__content {
+        gap: 5rem;
     }
     
-    /* Optimasi background lainnya */
-    .metal-card {
-        background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    .profile-image-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .profile-video {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .home__title {
+        font-size: 42px;
     }
 }
 
-/* ==================== SCROLLUP DISABLE ON MOBILE ==================== */
-
-/* Disable scrollup di semua ukuran mobile (di bawah 768px) */
-@media screen and (max-width: 768px) {
-    .scrollup {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
+/* Pastikan gambar referensi tetap rapi */
+.home__title, 
+.home__subtitle, 
+.home__description,
+.section__title,
+.section__subtitle {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Atau jika ingin disable di bawah 500px saja */
-@media screen and (max-width: 500px) {
-    .scrollup {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
+/* Optimasi untuk tampilan seperti gambar */
+.profile-border {
+    border-color: rgba(196, 30, 58, 0.4);
 }
 
-/* Atau disable berdasarkan orientasi landscape */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    .scrollup {
-        display: none !important;
-    }
+.home__title-line {
+    font-weight: var(--font-black);
+    letter-spacing: 2px;
 }
 
-/* Untuk ukuran sangat kecil (320px ke bawah) */
-@media screen and (max-width: 320px) {
-    .scrollup {
-        display: none !important;
-    }
+.rotating-text {
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
 }
 
-/* Pastikan tidak muncul meskipun ada class show-scroll */
-@media screen and (max-width: 768px) {
-    .show-scroll.scrollup {
-        display: none !important;
-    }
+.home__description {
+    font-weight: var(--font-medium);
+    opacity: 0.9;
+}
+
+.button {
+    font-weight: var(--font-bold);
+    border-width: 2px;
+}
+
+/* Pastikan skill section rapi */
+.skills__title {
+    font-weight: var(--font-black);
+}
+
+.skills__category {
+    font-weight: var(--font-bold);
+    color: var(--metal-primary);
+}
+
+/* Service section seperti gambar */
+.services__title {
+    font-weight: var(--font-black);
+    line-height: 1.3;
+}
+
+.services__content::before {
+    background: linear-gradient(to bottom, transparent, var(--metal-primary), transparent);
+}
+
+/* Portfolio section */
+.portfolio__title {
+    font-weight: var(--font-black);
+    letter-spacing: 2px;
+}
+
+.portfolio__description {
+    font-weight: var(--font-medium);
+}
+
+/* Footer */
+.footer__title {
+    font-weight: var(--font-black);
+}
+
+.footer__link {
+    font-weight: var(--font-bold);
 }
