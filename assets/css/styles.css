@@ -3195,3 +3195,404 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }}
+
+/*==================== EXTRA SMALL MOBILE DEVICES (Android terkecil 280px - 320px) ====================*/
+@media screen and (max-width: 320px) {
+    :root {
+        --big-font-size: 1.8rem;
+        --h1-font-size: 1.4rem;
+        --h2-font-size: 1.2rem;
+        --h3-font-size: 1.1rem;
+        --normal-font-size: 0.85rem;
+        --small-font-size: 0.75rem;
+        --smaller-font-size: 0.7rem;
+    }
+
+    .container {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+
+    /* Loading Screen */
+    .loading-title {
+        font-size: 1.4rem;
+    }
+    
+    .loading-subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+    
+    .percentage {
+        font-size: 1.8rem;
+    }
+    
+    .status-message {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    /* Navigation */
+    .nav {
+        padding: 0 0.5rem;
+    }
+    
+    .nav__logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo-sub {
+        font-size: 0.65rem;
+    }
+    
+    .nav__menu {
+        padding: 1rem 0.75rem;
+    }
+    
+    .nav__list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .nav__link {
+        font-size: 0.6rem;
+    }
+    
+    .nav__icon {
+        font-size: 1.1rem;
+    }
+    
+    .nav__close {
+        font-size: 1.3rem;
+        right: 0.8rem;
+        top: 0.8rem;
+    }
+
+    /* Home Section */
+    .home__content {
+        gap: 1rem;
+        padding-top: 3.5rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-image,
+    .profile-video {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .home__social {
+        gap: 1rem;
+    }
+    
+    .home__social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .home__title {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    
+    .animated-subtitle {
+        height: 30px;
+    }
+    
+    .rotating-text {
+        font-size: 1rem;
+    }
+    
+    .home__description {
+        font-size: 0.8rem;
+        padding: 0;
+        line-height: 1.4;
+    }
+    
+    .button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Personality Traits */
+    .personality-traits {
+        display: none; /* Sembunyikan di layar sangat kecil untuk menghindari tumpang tindih */
+    }
+
+    /* Skills Section */
+    .skills__header {
+        padding: 1rem;
+    }
+    
+    .skills__title {
+        font-size: 0.9rem;
+    }
+    
+    .skills__subtitle {
+        font-size: 0.65rem;
+    }
+    
+    .skills__icon,
+    .skills__arrow {
+        font-size: 1.2rem;
+    }
+    
+    .skills__list {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+    
+    .skills__titles {
+        padding: 0.4rem 0;
+    }
+    
+    .skills__name {
+        font-size: 0.7rem;
+    }
+    
+    .skills__level {
+        font-size: 0.55rem;
+        padding: 0.15rem 0.3rem;
+    }
+
+    /* Services Section */
+    .services__container {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .services__content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .services__icon {
+        font-size: 2.2rem;
+    }
+    
+    .services__title {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .services__button {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Modal */
+    .services__modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .services__modal-title {
+        font-size: 1.2rem;
+    }
+    
+    .services__modal-service {
+        gap: 0.5rem;
+    }
+    
+    .services__modal-service p {
+        font-size: 0.8rem;
+    }
+    
+    .services__modal-icon {
+        font-size: 1rem;
+    }
+    
+    .services__modal-close {
+        font-size: 1.5rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Portfolio Section */
+    .portfolio__container {
+        padding: 1rem 0 3rem;
+    }
+    
+    .portfolio__content {
+        padding: 1rem 0.5rem;
+    }
+    
+    .portfolio__img {
+        height: 100px;
+        max-width: 180px;
+    }
+    
+    .portfolio__title {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .portfolio__description {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .swiper-pagination-bullet-active {
+        width: 20px;
+    }
+
+    /* Footer */
+    .footer__bg {
+        padding: 2rem 1rem;
+    }
+    
+    .footer__title {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .footer__subtitle {
+        font-size: 0.7rem;
+    }
+    
+    .footer__links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .footer__link {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+    
+    .footer__social {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    .footer__copy {
+        font-size: 0.65rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Scroll Up */
+    .scrollup {
+        width: 35px;
+        height: 35px;
+        right: 0.8rem;
+    }
+    
+    .scrollup__icon {
+        font-size: 1.2rem;
+    }
+    
+    .show-scroll {
+        bottom: 4rem;
+    }
+
+    /* Section Titles */
+    .section {
+        padding: 3rem 0 4rem;
+    }
+    
+    .section__title {
+        font-size: 1.4rem;
+    }
+    
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 30px;
+    }
+    
+    .section__subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+}
+
+/*==================== SUPER EXTRA SMALL (280px dan dibawahnya) ====================*/
+@media screen and (max-width: 280px) {
+    :root {
+        --big-font-size: 1.5rem;
+        --h1-font-size: 1.2rem;
+        --h2-font-size: 1rem;
+        --h3-font-size: 0.95rem;
+    }
+
+    .container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+    
+    .nav__link {
+        font-size: 0.55rem;
+    }
+    
+    .nav__icon {
+        font-size: 1rem;
+    }
+
+    .profile-image-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .profile-image,
+    .profile-video {
+        width: 100px;
+        height: 100px;
+    }
+
+    .home__social {
+        gap: 0.8rem;
+    }
+    
+    .home__social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .home__title {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.7rem;
+    }
+
+    .skills__header {
+        padding: 0.8rem;
+    }
+    
+    .skills__title {
+        font-size: 0.8rem;
+    }
+
+    .portfolio__img {
+        height: 80px;
+        max-width: 150px;
+    }
+
+    .footer__link {
+        font-size: 0.7rem;
+    }
+    
+    .footer__social {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+}
