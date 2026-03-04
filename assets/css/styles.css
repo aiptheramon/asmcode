@@ -4407,3 +4407,359 @@ img {
         hyphens: auto;
     }
 }
+
+/* ==================== SILK BACKGROUND ULTRA RESPONSIVE (280px minimum) ==================== */
+
+/* Base silk background optimizations for all devices */
+#silk {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.45;
+    will-change: transform;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Tablet and medium devices */
+@media screen and (max-width: 768px) {
+    #silk {
+        opacity: 0.35; /* Kurangi opacity untuk performa lebih baik */
+    }
+}
+
+/* Small devices (600px and down) */
+@media screen and (max-width: 600px) {
+    #silk {
+        opacity: 0.3; /* Lebih transparan untuk baterai saving */
+        animation-duration: 0.5s; /* Kurangi kompleksitas animasi */
+    }
+}
+
+/* Extra small devices (480px and down) */
+@media screen and (max-width: 480px) {
+    #silk {
+        opacity: 0.25; /* Transparansi lebih tinggi */
+        filter: blur(0.5px); /* Sedikit blur untuk efek halus dengan performa ringan */
+    }
+}
+
+/* Very small devices (400px and down) */
+@media screen and (max-width: 400px) {
+    #silk {
+        opacity: 0.2;
+        filter: blur(0.8px);
+        /* Kurangi frekuensi update untuk hemat baterai */
+        animation: none; /* Matikan animasi jika ada */
+    }
+}
+
+/* Minimum supported size (320px) */
+@media screen and (max-width: 320px) {
+    #silk {
+        opacity: 0.18; /* Sangat transparan */
+        filter: blur(1px);
+        animation: none;
+        /* Optimasi performa */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+    }
+    
+    /* Pastikan canvas tidak mengganggu interaksi */
+    #silk {
+        touch-action: none;
+    }
+}
+
+/* Ultra minimum (280px) - Target spesifik */
+@media screen and (max-width: 280px) {
+    #silk {
+        opacity: 0.15; /* Minimal opacity */
+        filter: blur(1.2px); /* Lebih blur untuk efek soft */
+        display: block; /* Tetap tampil tapi sangat halus */
+        
+        /* Optimalisasi performa maksimal */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
+        /* Nonaktifkan efek-efek berat */
+        background-attachment: scroll; /* Ganti dari fixed untuk performa */
+        
+        /* Pastikan tidak overflow */
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    /* Alternatif jika canvas terlalu berat, bisa diganti dengan CSS gradient */
+    canvas#silk {
+        image-rendering: -webkit-optimize-contrast; /* Optimasi rendering */
+        image-rendering: crisp-edges; /* Untuk pixel density rendah */
+    }
+}
+
+/* Untuk device dengan baterai rendah - via media query level 5 */
+@media (prefers-reduced-data: reduce) {
+    #silk {
+        opacity: 0.1;
+        filter: blur(2px);
+        animation: none;
+    }
+}
+
+/* Untuk device dengan performa rendah */
+@media (pointer: coarse) and (max-width: 480px) {
+    #silk {
+        opacity: 0.2;
+        /* Nonaktifkan efek berat */
+        -webkit-animation: none;
+        animation: none;
+    }
+}
+
+/* Dark mode adjustment untuk silk */
+@media (prefers-color-scheme: dark) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            opacity: 0.2; /* Sedikit lebih terang di dark mode */
+        }
+    }
+    
+    @media screen and (max-width: 280px) {
+        #silk {
+            opacity: 0.18;
+        }
+    }
+}
+
+/* Light mode adjustment */
+@media (prefers-color-scheme: light) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            opacity: 0.15; /* Lebih transparan di light mode */
+        }
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    #silk {
+        opacity: 0.1; /* Minimal di high contrast */
+        filter: blur(2px);
+    }
+}
+
+/* Reduced motion - nonaktifkan animasi silk */
+@media (prefers-reduced-motion: reduce) {
+    #silk {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    @media screen and (max-width: 320px) {
+        #silk {
+            opacity: 0.12;
+        }
+    }
+}
+
+/* Landscape orientation untuk sangat kecil */
+@media screen and (max-height: 400px) and (orientation: landscape) and (max-width: 700px) {
+    #silk {
+        opacity: 0.12; /* Sangat transparan di landscape */
+        filter: blur(1.5px);
+    }
+}
+
+/* Untuk device dengan pixel density rendah */
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            image-rendering: pixelated; /* Optimasi untuk layar low-res */
+        }
+    }
+}
+
+/* Untuk device dengan pixel density tinggi */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    }
+}
+
+/* Battery saving mode detection via media query */
+@media (prefers-reduced-transparency: reduce) {
+    #silk {
+        opacity: 0.1;
+        filter: blur(2px);
+    }
+    
+    @media screen and (max-width: 280px) {
+        #silk {
+            opacity: 0.08; /* Hampir tidak terlihat */
+            display: none; /* Opsional: bisa disembunyikan */
+        }
+    }
+}
+
+/* Fix untuk notched phones */
+@supports (padding: max(0px)) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            left: env(safe-area-inset-left);
+            right: env(safe-area-inset-right);
+            top: env(safe-area-inset-top);
+            bottom: env(safe-area-inset-bottom);
+            width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+            height: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        }
+    }
+}
+
+/* Optimasi untuk OLED screen di ukuran kecil */
+@media (screen) and (max-width: 320px) {
+    #silk {
+        /* Untuk OLED, hitam pekat lebih hemat baterai */
+        mix-blend-mode: multiply;
+        opacity: 0.15;
+    }
+}
+
+/* Fallback untuk browser yang tidak support canvas dengan baik */
+@supports not (object-fit: cover) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            display: none; /* Sembunyikan jika tidak support */
+        }
+        
+        /* Fallback gradient */
+        .metal-theme::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(196, 30, 58, 0.05) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+}
+
+/* Memory optimization untuk low-end devices */
+@media (max-width: 320px) and (pointer: coarse) {
+    #silk {
+        /* Kurangi kualitas untuk hemat memori */
+        -webkit-canvas: none;
+        image-rendering: optimizeSpeed;
+    }
+}
+
+/* Test untuk ukuran terkecil 280px */
+@media screen and (max-width: 280px) {
+    #silk {
+        opacity: 0.12; /* Paling minimal */
+        filter: blur(1.5px);
+        
+        /* Pastikan tidak mempengaruhi performa scroll */
+        -webkit-overflow-scrolling: auto;
+        overflow-scrolling: auto;
+    }
+    
+    /* Mungkin lebih baik nonaktifkan untuk ukuran ini jika terlalu berat */
+    .low-end-mode #silk {
+        display: none;
+    }
+}
+
+/* Conditional berdasarkan RAM/CPU (tidak semua browser support) */
+@media (update: slow) {
+    #silk {
+        opacity: 0.1;
+        filter: blur(2px);
+        animation: none;
+    }
+}
+
+/* Untuk device dengan framerate rendah */
+@media (resolution: 72dpi) and (max-width: 320px) {
+    #silk {
+        display: none; /* Sembunyikan untuk device sangat low-end */
+    }
+}
+
+/* Print mode - silk tidak perlu dicetak */
+@media print {
+    #silk {
+        display: none !important;
+    }
+}
+
+/* Final optimasi untuk semua ukuran di bawah 320px */
+@media screen and (max-width: 320px) {
+    /* Efek glow dikurangi */
+    .metal-theme::before {
+        opacity: 0.3;
+    }
+    
+    /* Pastikan silk tidak blocking */
+    #silk {
+        isolation: isolate;
+        contain: strict; /* Optimasi performa */
+        content-visibility: auto; /* Hanya render saat terlihat */
+    }
+}
+
+/* Ultra premium devices dengan layar sangat kecil (smartwatch/webview) */
+@media screen and (max-width: 240px) {
+    #silk {
+        display: none; /* Sembunyikan sama sekali untuk ukuran super kecil */
+    }
+    
+    /* Ganti dengan static gradient */
+    .metal-theme {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+}
+
+/* Dynamic based on battery level - via JS biasanya, tapi kita siapkan class */
+.battery-saving #silk {
+    opacity: 0.1;
+    filter: blur(2px);
+    animation: none;
+    transition: opacity 0.1s ease;
+}
+
+.battery-critical #silk {
+    display: none;
+}
+
+/* Performance mode */
+.performance-mode #silk {
+    opacity: 0.08;
+    filter: blur(3px);
+    animation: none;
+    contain: strict;
+}
+
+/* Pastikan silk background tidak mengganggu aksesibilitas */
+#silk[aria-hidden="true"] {
+    display: none;
+}
+
+/* Viewport height fix untuk mobile */
+@supports (-webkit-touch-callout: none) {
+    @media screen and (max-width: 320px) {
+        #silk {
+            height: -webkit-fill-available;
+            height: 100vh; /* Fallback */
+        }
+    }
+}
+
