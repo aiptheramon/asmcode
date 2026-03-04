@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metalcore Portfolio - Brutal Web Development">
+    
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    
+    <!--==================== GOOGLE FONTS ====================-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>hey, it's me</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/asmcode.webp">
+
+</head>
+<body class="metal-theme">
+   <!--==================== LOADING SCREEN ====================-->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-container">
+            <!-- Compact Metalcore Loader -->
+            <div class="compact-loader">           
+                <!-- Loading Info -->
+                <div class="loading-info">
+                    <div class="loading-header">
+                        <h1 class="loading-title">ASM<span class="title-accent">CODE</span></h1>
+                        <div class="loading-subtitle">SYSTEM INIT</div>
+                    </div>
+                    
+                    <!-- Progress Display -->
+                    <div class="progress-display">
+                        <div class="percentage" id="loading-percentage">0%</div>
+                        <div class="progress-bar-compact">
+                            <div class="progress-fill-compact" id="progress-fill"></div>
+                            <div class="progress-glow-compact"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Status Message -->
+                    <div class="status-message" id="loading-message" hidden>Starting up...</div>
+                    
+                    <!-- System Status -->
+                    <div class="system-status">
+                        <div class="status-item">
+                            <span class="status-label" hidden>STATUS:</span>
+                            <span class="status-value" id="status-value" hidden>BOOTING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label" hidden>TIME:</span>
+                            <span class="status-value" id="loading-time" hidden>00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="logo-text">ASMCODE</span> 
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> 
+                            <span class="nav__text">HOME</span>
+                        </a>
+                    </li>              
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-info-alt nav__icon"></i> 
+                            <span class="nav__text">SKILLS</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i> 
+                            <span class="nav__text">SERVICES</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> 
+                            <span class="nav__text">PORTFOLIO</span>
+                        </a>
+                    </li>
+                </ul>            
+            </div>
+            
+            <!-- Toggle Button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="uil uil-apps"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+            <div class="home__content grid">
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/aip-suprapto-munari-a281111bb/" target="_blank" class="home__social-icon metal-icon">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aiptheramon/" target="_blank" class="home__social-icon metal-icon">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a href="https://github.com/aiptheramon" target="_blank" class="home__social-icon metal-icon">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div> 
+
+            <!--==================== HOME PROFILE IMAGE ====================-->
+            <div class="home__img">
+                <!-- Di bagian home profile image, ganti dengan ini: -->
+            <div class="profile-image-container">
+                <div class="profile-image-wrapper">
+                    <video class="profile-video" autoplay muted loop>
+                        <source src="assets/video/aip.webm" type="video/mp4">
+                    </video>
+                    <div class="profile-border"></div>
+                    
+                    <!-- Personality Traits Circle -->
+                    <div class="traits-circle">
+                        <div class="trait-item" data-trait="HUMBLE">
+                            <div class="scribble-arrow">
+                                <svg viewBox="0 0 100 40">
+                                    <path class="scribble-path" d="M10,20 Q30,5 50,20 Q70,35 90,20"/>
+                                </svg>
+                                <span class="trait-text">HUMBLE</span>
+                            </div>
+                        </div>
+                    
+                        <div class="trait-item" data-trait="CALM">
+                            <div class="scribble-arrow">
+                                <svg viewBox="0 0 100 40">
+                                    <path class="scribble-path" d="M10,20 Q35,5 50,25 Q65,35 90,20"/>
+                                </svg>
+                                <span class="trait-text">CALM</span>
+                            </div>
+                        </div>
+                    
+                        <div class="trait-item" data-trait="OPTIMISTIC">
+                            <div class="scribble-arrow">
+                                <svg viewBox="0 0 100 40">
+                                    <path class="scribble-path" d="M10,20 Q30,35 50,15 Q70,5 90,20"/>
+                                </svg>
+                                <span class="trait-text">OPTIMISTIC</span>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <!--==================== HOME PROFILE DATA ====================-->
+            <div class="home__data">
+                <h1 class="home__title">
+                    <span class="home__title-line">AIP SUPRAPTO</span>
+                    <span class="home__title-line">MUNARI</span>
+                </h1>
+                <div class="animated-subtitle">
+                    <span class="home__subtitle rotating-text" id="rotating-text">UI/UX Designer</span>
+                </div>
+                <p class="home__description">A strong passion for exploring website design and development, 
+                    consistently delivering high-quality work.
+                </p>
+                <a href="http://wa.me/6282317398167" class="button button--flex">
+                   Chat Me <i class="uil uil-whatsapp button__icon"></i>
+                </a>
+            </div>
+        </div> 
+        </div>
+    </section>
+
+       <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title metal-section-title">SKILLS</h2>
+            <span class="section__subtitle">Technical weaponry</span>
+
+        <div class="skills__container container grid">
+        <!--==================== UI/UX DESIGNER ====================-->
+        <div class="skills__content skills__close metal-card">
+            <div class="skills__header">
+                <i class="uil uil-swatchbook skills__icon metal-icon"></i>
+                <div>
+                    <h1 class="skills__title">UI/UX<br>DESIGNER</h1>
+                </div>
+                <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Adobe. XD</h3>
+                        <span class="skills__level">Basic</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Figma</h3>
+                        <span class="skills__level">Basic</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Adobe. Ps</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Canva</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">CorelDRAW</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--==================== JR. FULLSTACK DEVELOPER ====================-->
+        <div class="skills__content skills__close metal-card">
+            <div class="skills__header">
+                <i class="uil uil-server-network skills__icon metal-icon"></i>
+                <div class="skills__header-text">
+                    <h1 class="skills__title">JR. FULLSTACK<br>DEVELOPER</h1>
+                </div>
+                <i class="uil uil-angle-down skills__arrow metal-icon"></i>
+            </div>
+
+            <div class="skills__list grid">
+                <span class="skills__category">Frontend Developer</span>
+                
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">React JS</h3>
+                        <span class="skills__level">Basic</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Tailwind CSS</h3>
+                        <span class="skills__level">Basic</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Bootstrap</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Wordpress</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <span class="skills__category">Backend Developer</span>
+                
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Fr. CI</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">Fr. Laravel</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">JavaScript</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">MySQL</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+
+                <div class="skills__data">
+                    <div class="skills__titles">
+                        <i class="uil uil-check-circle skills__check-icon"></i>
+                        <h3 class="skills__name">PHP Native</h3>
+                        <span class="skills__level">Advance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--==================== SERVICES ====================-->
+    <section class="services section" id="services">
+    <h2 class="section__title metal-section-title">SERVICES</h2>
+    <span class="section__subtitle">What I Offer</span>
+
+    <div class="services__container container grid">
+        <!--==================== SERVICES 1 ====================-->
+        <div class="services__content metal-card">
+            <div class="services__icon-wrapper">
+                <i class="uil uil-gift services__icon metal-icon"></i>
+            </div>
+            <div>
+                <h3 class="services__title">FREE<br>CODE</h3>
+            </div>
+
+            <span class="button__service button--flex button--small button--link services__button" data-modal="modal1">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+
+        <!--==================== SERVICES 2 ====================-->
+        <div class="services__content metal-card">
+            <div class="services__icon-wrapper">
+                <i class="uil uil-rocket services__icon metal-icon"></i>
+            </div>
+            <div>
+                <h3 class="services__title">STARTER<br>CODE</h3>
+            </div>
+
+            <span class="button__service button--flex button--small button--link services__button" data-modal="modal2">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+
+        <!--==================== SERVICES 3 ====================-->
+        <div class="services__content metal-card">
+            <div class="services__icon-wrapper">
+                <i class="uil uil-award services__icon metal-icon"></i>
+            </div>
+            <div>
+                <h3 class="services__title">PREMIUM<br>CODE</h3>
+            </div>
+
+            <span class="button__service button--flex button--small button--link services__button" data-modal="modal3">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+        </div>
+    </section>
+
+        <div class="modals-container">
+            <!-- MODAL 1 -->
+            <div class="services__modal" id="modal1">
+                <div class="services__modal-content metal-modal">
+                    <h4 class="services__modal-title">FREE<br>CODE</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Users limited to Level 1 and Level 2 access</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Simple UI/UX design</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Non-complex system workflow</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Built using native PHP</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Basic database structure (essential tables only)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MODAL 2 -->
+            <div class="services__modal" id="modal2">
+                <div class="services__modal-content metal-modal">
+                    <h4 class="services__modal-title">STARTER<br>CODE</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Multi-user system</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Responsive UI/UX design</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Complex system workflow</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Built using PHP with a framework</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Structured and relational database management</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Website security implementation included</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MODAL 3 -->
+            <div class="services__modal" id="modal3">
+                <div class="services__modal-content metal-modal">
+                    <h4 class="services__modal-title">PREMIUM<br>CODE</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+
+                    <ul class="services__modal-services grid">         
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Multi-user system</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Fully Customizable</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Responsive and modern UI/UX design</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Advanced and complex system workflow</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Built using PHP with a framework</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>API integration based on project requirements</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Structured and relational database management</p>
+                        </li>
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Enhanced website security implementation</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title metal-section-title">PORTFOLIO</h2>
+            <span class="section__subtitle">Most recent chaos</span>
+            
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO 1 ====================-->
+                    <div class="portfolio__content swiper-slide">
+                    <img src="assets/img/internship.webp" loading="lazy" class="portfolio__img metal-img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">INTERNSHIP REPORT</h3>
+                        <p class="portfolio__description">A web-based application for internship student reporting that allows daily input entries and 
+                            implements the Haversine geolocation formula to determine distance limits for attendance within the campus area.
+                            Tools: PHP Framework CodeIgniter 3, MySQL, Bootstrap 4, CSS, JavaScript(AJAX).
+                        </p>                 
+                    </div>
+                </div>
+
+                    <!--==================== PORTFOLIO 2 ====================-->
+                    <div class="portfolio__content swiper-slide">
+                    <img src="assets/img/page.webp" loading="lazy" class="portfolio__img metal-img">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">LANDING PAGE</h3>
+                        <p class="portfolio__description">An internal corporate website designed to enhance credibility, strengthen branding, 
+                            and provide reliable information for customers and business partners. Tools: Wordpress.
+                        </p>                 
+                    </div>
+                </div>
+            
+                    <!--==================== PORTFOLIO 3 ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/stock.webp" loading="lazy" class="portfolio__img metal-img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">IT ASSET STOCK</h3>
+                            <p class="portfolio__description">An internal web-based application for managing IT asset inventory and stock. The system is responsive and supports various devices.
+                                Tools: PHP Native, MySQL, Bootstrap 4, CSS, JavaScript (AJAX).
+                            </p>                 
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 4 ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/helpdesk.webp" loading="lazy" class="portfolio__img metal-img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">IT HELPDESK SUPPORT</h3>
+                            <p class="portfolio__description">An internal web-based application for reporting and managing technical issues, 
+                                including both hardware and software problems, across branch offices. The system is responsive and supports various devices.
+                                Tools: PHP Framework CodeIgniter 3, MySQL, Bootstrap 4, CSS, JavaScript.
+                            </p>              
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 5 ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/performance.webp" loading="lazy" class="portfolio__img metal-img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">PERFORMANCE APPRASIAL</h3>
+                            <p class="portfolio__description">An internal web-based application for evaluating employee performance at all levels within the organization. 
+                                The system is responsive and supports various devices.
+                                Tools: PHP Native, MySQL, Bootstrap 4, CSS, JavaScript
+                            </p>              
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Pagination-->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg metal-bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">ASMCODE DEV</h1>
+                    <span class="footer__subtitle">Frontend destruction</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link">SKILLS</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="footer__link">SERVICES</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">PORTFOLIO</a>
+                    </li>        
+                </ul>
+            </div>
+            <p class="footer__copy">&#169; ASMCODE DEV. All chaos reserved</p>            
+        </div>
+    </footer>
+    
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== SILK BACKGROUND ====================-->
+    <canvas id="silk"></canvas>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/loading.js" defer></script>
+    <script src="assets/js/silk.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/access.js" defer></script>
+    
+</body>
+</html>
