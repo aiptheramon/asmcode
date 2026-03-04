@@ -3196,135 +3196,67 @@ img {
     }
 }}
 
-/*==================== EXTRA SMALL MOBILE DEVICES (Android terkecil 280px - 320px) ====================*/
-@media screen and (max-width: 320px) {
-    :root {
-        --big-font-size: 1.8rem;
-        --h1-font-size: 1.4rem;
-        --h2-font-size: 1.2rem;
-        --h3-font-size: 1.1rem;
-        --normal-font-size: 0.85rem;
-        --small-font-size: 0.75rem;
-        --smaller-font-size: 0.7rem;
-    }
+/* ==================== ULTRA RESPONSIVE FIXES - ALL DEVICES DOWN TO 320px ==================== */
 
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    /* Container adjustments */
     .container {
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-    }
-
-    /* Loading Screen */
-    .loading-title {
-        font-size: 1.4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     
-    .loading-subtitle {
-        font-size: 0.6rem;
-        letter-spacing: 2px;
+    /* Section padding */
+    .section {
+        padding: 3rem 0 4rem;
     }
     
-    .percentage {
+    .section__title {
         font-size: 1.8rem;
     }
     
-    .status-message {
+    .section__subtitle {
         font-size: 0.8rem;
-        padding: 0.4rem;
-    }
-
-    /* Navigation */
-    .nav {
-        padding: 0 0.5rem;
+        margin-bottom: 2rem;
     }
     
-    .nav__logo {
-        font-size: 1.2rem;
+    /* Metal section title lines adjustment */
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 30px;
     }
     
-    .logo-sub {
-        font-size: 0.65rem;
-    }
-    
-    .nav__menu {
-        padding: 1rem 0.75rem;
-    }
-    
-    .nav__list {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.8rem;
-    }
-    
-    .nav__link {
-        font-size: 0.6rem;
-    }
-    
-    .nav__icon {
-        font-size: 1.1rem;
-    }
-    
-    .nav__close {
-        font-size: 1.3rem;
-        right: 0.8rem;
-        top: 0.8rem;
-    }
-
-    /* Home Section */
+    /* Home section */
     .home__content {
-        gap: 1rem;
-        padding-top: 3.5rem;
+        padding-top: 3rem;
+        gap: 1.5rem;
     }
     
     .profile-image-wrapper {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
     
-    .profile-image,
     .profile-video {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .home__social {
-        gap: 1rem;
-    }
-    
-    .home__social-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+        width: 180px;
+        height: 180px;
     }
     
     .home__title {
-        font-size: 1.4rem;
-        letter-spacing: 1px;
-    }
-    
-    .animated-subtitle {
-        height: 30px;
-    }
-    
-    .rotating-text {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
     
     .home__description {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         padding: 0;
-        line-height: 1.4;
+        max-width: 100%;
     }
     
-    .button {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.8rem;
+    /* Skills section */
+    .skills__container {
+        gap: 1rem;
     }
-
-    /* Personality Traits */
-    .personality-traits {
-        display: none; /* Sembunyikan di layar sangat kecil untuk menghindari tumpang tindih */
-    }
-
-    /* Skills Section */
+    
     .skills__header {
         padding: 1rem;
     }
@@ -3333,19 +3265,8 @@ img {
         font-size: 0.9rem;
     }
     
-    .skills__subtitle {
-        font-size: 0.65rem;
-    }
-    
-    .skills__icon,
-    .skills__arrow {
-        font-size: 1.2rem;
-    }
-    
     .skills__list {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 0.75rem;
+        padding: 0.8rem 1rem 1.2rem;
     }
     
     .skills__titles {
@@ -3353,71 +3274,52 @@ img {
     }
     
     .skills__name {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
     
     .skills__level {
-        font-size: 0.55rem;
-        padding: 0.15rem 0.3rem;
+        font-size: 0.6rem;
+        padding: 0.15rem 0.4rem;
     }
-
-    /* Services Section */
+    
+    /* Services section */
     .services__container {
-        gap: 1rem;
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .services__content {
         padding: 1.5rem 1rem;
     }
     
-    .services__icon {
-        font-size: 2.2rem;
-    }
-    
     .services__title {
-        font-size: 1rem;
-        letter-spacing: 1px;
+        font-size: 1.2rem;
     }
     
-    .services__button {
-        padding: 0.5rem 1rem;
+    .services__icon {
+        font-size: 2.5rem;
+    }
+    
+    .button__service {
+        padding: 0.6rem 1.2rem;
         font-size: 0.7rem;
     }
     
-    /* Modal */
+    /* Modal adjustments */
     .services__modal-content {
         padding: 1.5rem;
         width: 95%;
     }
     
     .services__modal-title {
-        font-size: 1.2rem;
-    }
-    
-    .services__modal-service {
-        gap: 0.5rem;
+        font-size: 1.3rem;
     }
     
     .services__modal-service p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
     
-    .services__modal-icon {
-        font-size: 1rem;
-    }
-    
-    .services__modal-close {
-        font-size: 1.5rem;
-        width: 30px;
-        height: 30px;
-    }
-
-    /* Portfolio Section */
-    .portfolio__container {
-        padding: 1rem 0 3rem;
-    }
-    
+    /* Portfolio section */
     .portfolio__content {
         padding: 1rem 0.5rem;
     }
@@ -3433,7 +3335,7 @@ img {
     }
     
     .portfolio__description {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         line-height: 1.4;
     }
     
@@ -3443,45 +3345,33 @@ img {
     }
     
     .swiper-pagination-bullet-active {
-        width: 20px;
+        width: 18px;
     }
-
+    
     /* Footer */
     .footer__bg {
         padding: 2rem 1rem;
     }
     
     .footer__title {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
+        font-size: 1.3rem;
     }
     
     .footer__subtitle {
         font-size: 0.7rem;
     }
     
-    .footer__links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    
     .footer__link {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         letter-spacing: 1px;
-    }
-    
-    .footer__social {
-        width: 32px;
-        height: 32px;
-        font-size: 1rem;
     }
     
     .footer__copy {
         font-size: 0.65rem;
         margin-top: 1.5rem;
     }
-
-    /* Scroll Up */
+    
+    /* Scroll up */
     .scrollup {
         width: 35px;
         height: 35px;
@@ -3492,70 +3382,233 @@ img {
         font-size: 1.2rem;
     }
     
-    .show-scroll {
-        bottom: 4rem;
-    }
-
-    /* Section Titles */
-    .section {
-        padding: 3rem 0 4rem;
+    /* Personality traits */
+    .trait-text {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.4rem;
+        letter-spacing: 1px;
     }
     
-    .section__title {
+    .scribble-arrow svg {
+        width: 30px;
+    }
+}
+
+/* Small phones (480px and down) */
+@media screen and (max-width: 480px) {
+    .profile-image-wrapper {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .profile-video {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .home__title {
+        font-size: 1.6rem;
+    }
+    
+    .rotating-text {
+        font-size: 1rem;
+    }
+    
+    .home__description {
+        font-size: 0.85rem;
+    }
+    
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .skills__header {
+        padding: 0.8rem;
+    }
+    
+    .skills__icon, 
+    .skills__arrow {
+        font-size: 1.3rem;
+    }
+    
+    .skills__title {
+        font-size: 0.85rem;
+    }
+    
+    .skills__category {
+        font-size: 0.7rem;
+        padding-left: 0.4rem;
+    }
+    
+    .skills__check-icon {
+        font-size: 0.9rem;
+    }
+    
+    .services__title {
+        font-size: 1.1rem;
+    }
+    
+    .services__icon {
+        font-size: 2.2rem;
+    }
+    
+    .portfolio__img {
+        height: 90px;
+        max-width: 160px;
+    }
+    
+    .footer__links {
+        gap: 0.8rem;
+    }
+    
+    .footer__link {
+        font-size: 0.65rem;
+    }
+    
+    .trait-item:nth-child(1) {
+        transform: translate(-50%, -130%);
+    }
+    
+    .trait-item:nth-child(2) {
+        transform: translate(40%, -50%);
+    }
+    
+    .trait-item:nth-child(3) {
+        transform: translate(-50%, 40%);
+    }
+}
+
+/* Extra small phones (400px and down) */
+@media screen and (max-width: 400px) {
+    .profile-image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-video {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .home__title {
         font-size: 1.4rem;
     }
     
-    .metal-section-title::before,
-    .metal-section-title::after {
-        width: 30px;
+    .home__subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .home__social {
+        gap: 1rem;
+    }
+    
+    .home__social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .skills__header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .skills__arrow {
+        margin-left: 0;
+    }
+    
+    .services__modal-service {
+        flex-wrap: wrap;
+    }
+    
+    .services__modal-icon {
+        font-size: 1.1rem;
+    }
+    
+    .services__modal-service p {
+        font-size: 0.8rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .footer__container {
+        gap: 1rem;
+    }
+    
+    .footer__links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Minimum supported size (320px) */
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+    
+    .section {
+        padding: 2.5rem 0 3rem;
+    }
+    
+    .section__title {
+        font-size: 1.3rem;
     }
     
     .section__subtitle {
         font-size: 0.7rem;
-        letter-spacing: 1px;
-        margin-bottom: 2rem;
-    }
-}
-
-/*==================== SUPER EXTRA SMALL (280px dan dibawahnya) ====================*/
-@media screen and (max-width: 280px) {
-    :root {
-        --big-font-size: 1.5rem;
-        --h1-font-size: 1.2rem;
-        --h2-font-size: 1rem;
-        --h3-font-size: 0.95rem;
-    }
-
-    .container {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
-
-    .nav__list {
-        gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
     
-    .nav__link {
-        font-size: 0.55rem;
+    .metal-section-title::before,
+    .metal-section-title::after {
+        width: 20px;
     }
     
-    .nav__icon {
-        font-size: 1rem;
-    }
-
     .profile-image-wrapper {
         width: 130px;
         height: 130px;
     }
     
-    .profile-image,
     .profile-video {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
     }
-
-    .home__social {
-        gap: 0.8rem;
+    
+    .profile-border {
+        border-width: 2px;
+    }
+    
+    .home__title {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+    
+    .home__title-line {
+        display: block;
+    }
+    
+    .rotating-text {
+        font-size: 0.85rem;
+    }
+    
+    .animated-subtitle {
+        height: 25px;
+    }
+    
+    .home__description {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.75rem;
+    }
+    
+    .button__icon {
+        font-size: 1.1rem;
     }
     
     .home__social-icon {
@@ -3563,36 +3616,794 @@ img {
         height: 30px;
         font-size: 0.9rem;
     }
-
-    .home__title {
-        font-size: 1.2rem;
-    }
-
-    .button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.7rem;
-    }
-
+    
     .skills__header {
-        padding: 0.8rem;
+        padding: 0.6rem;
+    }
+    
+    .skills__icon, 
+    .skills__arrow {
+        font-size: 1.1rem;
     }
     
     .skills__title {
+        font-size: 0.75rem;
+    }
+    
+    .skills__list {
+        padding: 0.6rem 0.8rem 1rem;
+    }
+    
+    .skills__titles {
+        gap: 0.3rem;
+    }
+    
+    .skills__check-icon {
         font-size: 0.8rem;
     }
-
-    .portfolio__img {
-        height: 80px;
-        max-width: 150px;
+    
+    .skills__name {
+        font-size: 0.65rem;
     }
-
-    .footer__link {
+    
+    .skills__level {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.3rem;
+    }
+    
+    .skills__category {
+        font-size: 0.6rem;
+        margin: 0.2rem 0 0.2rem;
+    }
+    
+    .services__content {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .services__icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .services__title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .button__service {
+        padding: 0.5rem 1rem;
+        font-size: 0.65rem;
+    }
+    
+    .services__modal-content {
+        padding: 1rem;
+    }
+    
+    .services__modal-title {
+        font-size: 1.1rem;
+    }
+    
+    .services__modal-close {
+        font-size: 1.3rem;
+        width: 30px;
+        height: 30px;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .services__modal-service {
+        gap: 0.4rem;
+    }
+    
+    .services__modal-icon {
+        font-size: 1rem;
+    }
+    
+    .services__modal-service p {
         font-size: 0.7rem;
     }
     
-    .footer__social {
+    .portfolio__img {
+        height: 70px;
+        max-width: 120px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .portfolio__title {
+        font-size: 0.8rem;
+        padding-bottom: 0.3rem;
+    }
+    
+    .portfolio__description {
+        font-size: 0.65rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+        margin: 0 3px !important;
+    }
+    
+    .swiper-pagination-bullet-active {
+        width: 15px;
+    }
+    
+    .footer__bg {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .footer__title {
+        font-size: 1.1rem;
+    }
+    
+    .footer__subtitle {
+        font-size: 0.6rem;
+    }
+    
+    .footer__link {
+        font-size: 0.6rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .footer__copy {
+        font-size: 0.55rem;
+        margin-top: 1rem;
+    }
+    
+    .scrollup {
+        width: 30px;
+        height: 30px;
+        right: 0.5rem;
+    }
+    
+    .scrollup__icon {
+        font-size: 1rem;
+    }
+    
+    /* Personality traits for 320px */
+    .trait-text {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .scribble-arrow svg {
+        width: 25px;
+    }
+    
+    .trait-item:nth-child(1) {
+        transform: translate(-50%, -120%);
+    }
+    
+    .trait-item:nth-child(2) {
+        transform: translate(35%, -50%);
+    }
+    
+    .trait-item:nth-child(3) {
+        transform: translate(-50%, 35%);
+    }
+    
+    /* Loading screen for 320px */
+    .loading-title {
+        font-size: 1.2rem;
+    }
+    
+    .loading-subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+    
+    .percentage {
+        font-size: 1.2rem;
+    }
+    
+    .status-message {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+    }
+}
+
+/* Landscape orientation fixes for small devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .home__content {
+        padding-top: 2rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-video {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .home__social {
+        gap: 0.8rem;
+    }
+    
+    .home__social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .trait-item {
+        display: none; /* Hide personality traits in landscape to save space */
+    }
+    
+    .services__modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* Fix for notched phones */
+@supports (padding: max(0px)) {
+    @media screen and (max-width: 600px) {
+        .header {
+            padding-left: max(1rem, env(safe-area-inset-left));
+            padding-right: max(1rem, env(safe-area-inset-right));
+        }
+        
+        .footer__bg {
+            padding-bottom: max(1rem, env(safe-area-inset-bottom));
+        }
+    }
+}
+
+/* High refresh rate devices optimization */
+@media (min-resolution: 120dpi) {
+    .profile-video,
+    .portfolio__img {
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles - hide unnecessary elements when printing */
+@media print {
+    #silk,
+    .loading-screen,
+    .scrollup,
+    .nav__toggle,
+    .services__modal,
+    .home__social {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .metal-theme::before {
+        display: none;
+    }
+}
+
+/* ==================== HOME PROFILE DATA ULTRA RESPONSIVE (320px minimum) ==================== */
+
+/* Extra small devices (600px and down) */
+@media screen and (max-width: 600px) {
+    .home__data {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .home__title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        letter-spacing: 1px;
+    }
+    
+    .home__title-line {
+        display: block;
+    }
+    
+    .animated-subtitle {
+        height: 40px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .rotating-text {
+        font-size: 1.1rem;
+        white-space: normal;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home__description {
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin-bottom: 1.25rem;
+        line-height: 1.5;
+        padding: 0 0.25rem;
+    }
+    
+    .button.button--flex {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .button__icon {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small phones (480px and down) */
+@media screen and (max-width: 480px) {
+    .home__data {
+        padding: 0 0.25rem;
+    }
+    
+    .home__title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .animated-subtitle {
+        height: 35px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .rotating-text {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .home__description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        padding: 0;
+    }
+    
+    .button.button--flex {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.8rem;
+    }
+    
+    .button__icon {
+        font-size: 1.1rem;
+        margin-left: 0.4rem;
+    }
+}
+
+/* Extra small phones (400px and down) */
+@media screen and (max-width: 400px) {
+    .home__data {
+        padding: 0;
+    }
+    
+    .home__title {
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .home__title-line {
+        margin-bottom: 0.1rem;
+    }
+    
+    .animated-subtitle {
+        height: 30px;
+    }
+    
+    .rotating-text {
+        font-size: 0.9rem;
+    }
+    
+    .home__description {
+        font-size: 0.8rem;
+        margin-bottom: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .button.button--flex {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.75rem;
+    }
+    
+    .button__icon {
+        font-size: 1rem;
+        margin-left: 0.3rem;
+    }
+}
+
+/* Minimum supported size (320px) - HOME DATA FOCUS */
+@media screen and (max-width: 320px) {
+    .home__data {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .home__title {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .home__title-line {
+        display: block;
+        margin-bottom: 0.1rem;
+    }
+    
+    .home__title-line:last-child {
+        margin-bottom: 0;
+    }
+    
+    .animated-subtitle {
+        height: 25px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        padding: 0;
+        white-space: nowrap;
+    }
+    
+    /* Fix untuk rotating text di 320px */
+    .rotating-text.active {
+        transform: translateX(-50%) translateY(0);
+        width: auto;
+    }
+    
+    .home__description {
+        font-size: 0.7rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+        padding: 0 0.2rem;
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Button styling untuk 320px */
+    .button.button--flex {
+        padding: 0.5rem 1rem;
+        font-size: 0.65rem;
+        border-radius: 25px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+    
+    .button__icon {
+        font-size: 0.9rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Hover effects di nonaktifkan untuk mobile kecil */
+    .button:hover {
+        transform: none;
+        box-shadow: 0 5px 10px rgba(196, 30, 58, 0.3);
+    }
+    
+    /* Profile section integration */
+    .home__content {
+        gap: 1rem;
+        padding-top: 2.5rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.25rem;
+    }
+    
+    .profile-video {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-border {
+        border-width: 2px;
+    }
+    
+    /* Personality traits di 320px - lebih kecil dan dekat */
+    .trait-text {
+        font-size: 0.5rem;
+        padding: 0.1rem 0.25rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .scribble-arrow svg {
+        width: 22px;
+    }
+    
+    .trait-item:nth-child(1) {
+        transform: translate(-50%, -115%);
+    }
+    
+    .trait-item:nth-child(1) .scribble-arrow {
+        gap: 3px;
+    }
+    
+    .trait-item:nth-child(2) {
+        transform: translate(32%, -50%);
+    }
+    
+    .trait-item:nth-child(2) .scribble-arrow {
+        gap: 3px;
+    }
+    
+    .trait-item:nth-child(3) {
+        transform: translate(-50%, 32%);
+    }
+    
+    .trait-item:nth-child(3) .scribble-arrow {
+        gap: 3px;
+    }
+    
+    /* Social icons di 320px */
+    .home__social {
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    
+    .home__social-icon {
         width: 28px;
         height: 28px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Active states */
+    .active-link::after {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+/* Landscape mode untuk sangat kecil */
+@media screen and (max-height: 450px) and (orientation: landscape) and (max-width: 700px) {
+    .home__content {
+        padding-top: 1.5rem;
+        gap: 0.75rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .profile-video {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .home__data {
+        padding: 0 0.5rem;
+    }
+    
+    .home__title {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .animated-subtitle {
+        height: 20px;
+        margin-bottom: 0.2rem;
+    }
+    
+    .rotating-text {
+        font-size: 0.7rem;
+    }
+    
+    .home__description {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        max-width: 200px;
+    }
+    
+    .button.button--flex {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.55rem;
+    }
+    
+    .button__icon {
+        font-size: 0.7rem;
+    }
+    
+    .trait-item {
+        display: none; /* Hide traits in landscape */
+    }
+    
+    .home__social {
+        gap: 0.5rem;
+    }
+    
+    .home__social-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Untuk device dengan rasio pixel tinggi (Retina display) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .home__title {
+        text-shadow: 0 0 5px rgba(196, 30, 58, 0.3);
+    }
+    
+    .rotating-text {
+        text-shadow: 0 0 8px rgba(196, 30, 58, 0.4);
+    }
+}
+
+/* Fix untuk notched phones - home data */
+@supports (padding: max(0px)) {
+    @media screen and (max-width: 600px) {
+        .home__data {
+            padding-left: max(0.5rem, env(safe-area-inset-left));
+            padding-right: max(0.5rem, env(safe-area-inset-right));
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .home__data {
+            padding-left: max(0.25rem, env(safe-area-inset-left));
+            padding-right: max(0.25rem, env(safe-area-inset-right));
+        }
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .home__title {
+        text-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+    }
+    
+    .rotating-text {
+        text-shadow: 0 0 15px rgba(196, 30, 58, 0.6);
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .rotating-text {
+        transition: none;
+    }
+    
+    .rotating-text.active {
+        transition: none;
+    }
+    
+    .button:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .home__title {
+        color: #ffffff;
+        text-shadow: none;
+    }
+    
+    .rotating-text {
+        color: #ff0000;
+        text-shadow: none;
+    }
+    
+    .button {
+        border: 2px solid #ffffff;
+    }
+}
+
+/* Fix untuk font rendering di mobile kecil */
+@media screen and (max-width: 350px) {
+    .home__title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .rotating-text {
+        font-weight: 600; /* Sedikit lebih tebal untuk keterbacaan */
+    }
+    
+    .home__description {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* Pastikan teks tidak terpotong di 320px */
+@media screen and (max-width: 320px) {
+    .home__title,
+    .rotating-text,
+    .home__description,
+    .button {
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* Nama panjang tetap di satu baris */
+    .home__title-line {
+        white-space: nowrap;
+    }
+    
+    /* Untuk nama yang sangat panjang, kasih opsi wrap */
+    @media screen and (max-width: 280px) {
+        .home__title-line {
+            white-space: normal;
+            font-size: 1rem;
+        }
+        
+        .home__title {
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Tambahan styling untuk animasi subtitle di 320px */
+@media screen and (max-width: 320px) {
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+    
+    .rotating-text.active {
+        animation: fadeInUp 0.4s ease forwards;
+    }
+    
+    /* Optimasi untuk performa */
+    .rotating-text {
+        will-change: transform, opacity;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .button:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+    
+    .home__social-icon:active {
+        transform: scale(0.9);
+    }
+}
+
+/* Final check untuk 320px - memastikan semuanya muat */
+@media screen and (max-width: 320px) {
+    /* Container width fix */
+    .home__container {
+        width: 100%;
+        min-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 0.5rem;
+    }
+    
+    /* Flexibilitas untuk konten */
+    .home__data {
+        width: 100%;
+        min-width: 260px;
+    }
+    
+    /* Memastikan button tidak terlalu panjang */
+    .button {
+        max-width: 180px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Overflow protection */
+    .home__description {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 }
