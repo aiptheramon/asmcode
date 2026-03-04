@@ -4467,3 +4467,46 @@ img {
         background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
     }
 }
+
+/* ==================== SCROLLUP DISABLE ON MOBILE ==================== */
+
+/* Disable scrollup di semua ukuran mobile (di bawah 768px) */
+@media screen and (max-width: 768px) {
+    .scrollup {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
+/* Atau jika ingin disable di bawah 500px saja */
+@media screen and (max-width: 500px) {
+    .scrollup {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
+/* Atau disable berdasarkan orientasi landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .scrollup {
+        display: none !important;
+    }
+}
+
+/* Untuk ukuran sangat kecil (320px ke bawah) */
+@media screen and (max-width: 320px) {
+    .scrollup {
+        display: none !important;
+    }
+}
+
+/* Pastikan tidak muncul meskipun ada class show-scroll */
+@media screen and (max-width: 768px) {
+    .show-scroll.scrollup {
+        display: none !important;
+    }
+}
