@@ -6,17 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
+    /* Menu open */
     if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu')
+        })
     }
 
+    /* Menu close */
     if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
     }
+
+    /* Close menu when click outside (opsional) */
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target) && navMenu.classList.contains('show-menu')) {
+            navMenu.classList.remove('show-menu')
+        }
+    })
+
+    /* Close menu when click on nav link (untuk mobile) */
+    const navLinks = document.querySelectorAll('.nav__link')
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('show-menu')
+            }
+        })
+    })
     /*==================== ACCORDION SKILLS ====================*/
     const skillsContent = document.querySelectorAll('.skills__content');
     const skillsHeaders = document.querySelectorAll('.skills__header');
