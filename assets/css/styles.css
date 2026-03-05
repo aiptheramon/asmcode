@@ -492,165 +492,221 @@ img {
     color: var(--metal-primary);
 }
 
-/* ================= MOBILE NAV ================= */
-@media screen and (max-width: 768px) {
-
+/* Desktop Navigation (769px ke atas) */
+@media screen and (min-width: 769px) {
     .nav__menu {
-      position: fixed;
-      left: 0;
-      bottom: -100%;
-      width: 100%;
-      background: #0a0a0a;
-      padding: 1rem 1.5rem 1rem;
-      border-radius: 1.5rem 1.5rem 0 0;
-      border-top: 1px solid var(--metal-primary);
-      box-shadow: 0 -5px 30px rgba(196, 30, 58, 0.25);
-      transition: .35s ease;
-      z-index: 1000;
+        margin-left: auto;
     }
-  
-    .show-menu {
-      bottom: 0;
-    }
-  
+    
     .nav__list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); 
-      gap: 1.8rem;
-      text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
-  
+    
     .nav__item {
-      display: flex;
-      justify-content: center;
+        list-style: none;
     }
-  
+    
     .nav__link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .4rem;
-      font-size: .7rem;
-      letter-spacing: 1px;
-      font-family: var(--title-font);
-      color: #aaa;
-      transition: .3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        color: var(--metal-light);
+        font-family: var(--title-font);
+        font-size: 0.9rem;
+        font-weight: var(--font-medium);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        position: relative;
     }
-  
+    
     .nav__icon {
-      font-size: 1.3rem;
-      color: var(--metal-primary);
-      transition: .3s ease;      
+        font-size: 1.2rem;
+        color: var(--metal-primary);
+        transition: all 0.3s ease;
     }
-  
+    
     .nav__link:hover {
-      color: #fff;
+        color: #fff;
     }
-  
+    
     .nav__link:hover .nav__icon {
-      transform: translateY(-3px);
-      text-shadow: 0 0 10px var(--metal-primary);
+        transform: translateY(-2px);
+        text-shadow: 0 0 10px var(--metal-primary);
     }
-  
-    /* ACTIVE */
+    
+    .nav__link:hover .nav__text {
+        text-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+    }
+    
+    /* Active link */
     .active-link {
-      color: #fff;
+        color: #fff;
     }
-  
+    
     .active-link .nav__icon {
-      text-shadow: 0 0 12px var(--metal-primary);
+        color: var(--metal-primary);
+        text-shadow: 0 0 10px var(--metal-primary);
     }
-  
-    .nav__close {
-      position: absolute;
-      right: 1.2rem;
-      top: 1rem;
-      font-size: 1.5rem;
-      color: var(--metal-primary);
-      cursor: pointer;
-      transition: .3s ease;
+    
+    .active-link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        background-color: var(--metal-primary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--metal-primary);
     }
-  
-    .nav__close:hover {
-      transform: rotate(90deg);
-    }
-  
+    
     .nav__toggle {
-      font-size: 1.3rem;
-      color: var(--metal-light);
+        display: none;
     }
-  }
-
-.nav__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--small-font-size);
-    color: var(--metal-light);
-    font-weight: var(--font-medium);
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 0.5rem;
 }
 
-.nav__link:hover {
-    color: var(--metal-primary);    
+/* Mobile Navigation (768px ke bawah) */
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 2rem 1.5rem 1.5rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+        border-top: 2px solid var(--metal-primary);
+        box-shadow: 0 -5px 30px rgba(196, 30, 58, 0.25);
+        transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+    
+    .show-menu {
+        bottom: 0;
+    }
+    
+    .nav__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    
+    .nav__item {
+        list-style: none;
+    }
+    
+    .nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.75rem 0.25rem;
+        color: #aaa;
+        font-family: var(--title-font);
+        font-size: 0.7rem;
+        font-weight: var(--font-medium);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border-radius: 12px;
+    }
+    
+    .nav__icon {
+        font-size: 1.3rem;
+        color: var(--metal-primary);
+        transition: all 0.3s ease;
+    }
+    
+    .nav__link:hover {
+        color: #fff;
+        background: rgba(196, 30, 58, 0.1);
+    }
+    
+    .nav__link:hover .nav__icon {
+        transform: translateY(-3px);
+        text-shadow: 0 0 10px var(--metal-primary);
+    }
+    
+    /* Active link untuk mobile */
+    .active-link {
+        color: #fff;
+    }
+    
+    .active-link .nav__icon {
+        text-shadow: 0 0 12px var(--metal-primary);
+    }
+    
+    /* Close button */
+    .nav__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.2rem;
+        font-size: 1.5rem;
+        color: var(--metal-primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__close:hover {
+        transform: rotate(90deg);
+    }
 }
 
-.nav__link:hover .nav__text {
-    text-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+/* Small Mobile (480px ke bawah) */
+@media screen and (max-width: 480px) {
+    .nav__menu {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .nav__list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .nav__link {
+        padding: 0.5rem 0.1rem;
+        font-size: 0.6rem;
+    }
+    
+    .nav__icon {
+        font-size: 1.2rem;
+    }
+    
+    .nav__close {
+        top: 0.75rem;
+        right: 1rem;
+        font-size: 1.3rem;
+    }
 }
 
-.nav__text {
-    font-family: var(--title-font);
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-}
-
-.nav__close {
-    position: absolute;
-    right: 1.3rem;
-    bottom: .5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--metal-primary);
-}
-
-.nav__close:hover {
-    color: var(--first-color-alt);
-}
-
-/* show menu */
-.show-menu {
-    bottom: 0;
-}
-
-.nav__btns {
-    display: flex;
-    align-items: center;
-}
-
-/* show menu */
-.show-menu {
-    bottom: 0;
-}
-
-/* Active link */
-.active-link {
-    color: var(--metal-primary);
-}
-
-.active-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 5px;
-    background-color: var(--metal-primary);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--metal-primary);
+/* Extra Small Mobile (350px ke bawah) */
+@media screen and (max-width: 350px) {
+    .nav__menu {
+        padding: 1.2rem 0.75rem 0.75rem;
+    }
+    
+    .nav__list {
+        gap: 0.25rem;
+    }
+    
+    .nav__link {
+        padding: 0.4rem 0;
+        font-size: 0.55rem;
+    }
+    
+    .nav__icon {
+        font-size: 1.1rem;
+    }
+    
+    .nav__text {
+        letter-spacing: 0.5px;
+    }
 }
 
 /* Change background header */
