@@ -4677,3 +4677,75 @@ img {
     position: relative;
     opacity: 1;
 }
+
+/*==================== SILK BACKGROUND RESPONSIVE ====================*/
+/* Perbaikan untuk semua ukuran perangkat */
+@media screen and (max-width: 1200px) {
+    #silk {
+        opacity: 0.4;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #silk {
+        opacity: 0.35;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #silk {
+        opacity: 0.25;
+        /* Pastikan canvas menyesuaikan dengan viewport */
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #silk {
+        opacity: 0.2;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #silk {
+        opacity: 0.15;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #silk {
+        opacity: 0.1;
+    }
+}
+
+/* Untuk perangkat dengan layar tinggi (seperti iPhone panjang) */
+@media screen and (min-height: 800px) and (max-width: 400px) {
+    #silk {
+        opacity: 0.12;
+    }
+}
+
+/* Untuk landscape mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #silk {
+        opacity: 0.1;
+    }
+}
+
+/* Untuk perangkat dengan pixel density tinggi (Retina display) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #silk {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Pastikan silk tidak mengganggu performa di semua perangkat */
+#silk {
+    will-change: transform;
+    pointer-events: none;
+    transform: translateZ(0); /* Hardware acceleration */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
