@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
+
     /*==================== ACCORDION SKILLS ====================*/
     const skillsContent = document.querySelectorAll('.skills__content');
     const skillsHeaders = document.querySelectorAll('.skills__header');
@@ -444,4 +445,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('scroll', scrollUp);
 
-}); // Akhir dari DOMContentLoaded
+}); 
